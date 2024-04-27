@@ -1,0 +1,9 @@
+Classe Cliente:
+Atributos: ID do cliente, Nome do cliente, Email do cliente
+Métodos: __init__, salvar, editar, excluir
+Classe Produto:
+Atributos: ID do produto, Nome do produto, Preço do produto
+Métodos: __init__, salvar, editar, excluir
+Classe Pedido:
+Atributos: ID do pedido, ID do cliente que fez o pedido, Lista de produtos no pedido 
+Métodos: __init__, adicionar_produto, remover_produto, calcular_total, finalizar_pedido
