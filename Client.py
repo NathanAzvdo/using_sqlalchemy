@@ -8,10 +8,7 @@ class Client(Base):
     name = Column(String(50))
     cpf = Column(String(14))
     email = Column(String(120))
-            
-    def __repr__(self) -> str:
-        return f"<id:{self.id}, Client Name:{self.name}, Cpf:{self.cpf}, Email: {self.email}>"
-    
+                
     @staticmethod
     def selectOne(param, value):
         try:
@@ -53,7 +50,7 @@ class Client(Base):
                 new_client = Client(name=name, cpf=cpf, email=email)
                 session.add(new_client)
                 session.commit()
-                return True, "Client created successfully"
+                return new_client.id
         except Exception as e:
             return False, f"Error: {e}"
         
